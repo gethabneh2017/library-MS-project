@@ -239,6 +239,95 @@ void addBook(int id, string title, string author, string genre) {
         cout << "Member not found!\n";
     }
 
+// From Destaw Demeke
+
+    void issueBook(int bookId, int memberId) {
+        Book* book = NULL;
+        for (int i = 0; i < bookCount; i++) {
+            if (books[i].id == bookId) {
+                book = &books[i];
+                break;
+            }
+        }
+
+        Member* member = membersHead;
+        while (member) {
+            if (member->id == memberId) break;
+            member = member->next;
+        }
+
+if (!book==!member) {
+            cout << "Invalid book or member!\n";
+            return;
+        }
+        if (book->isIssued) {
+            cout << "Book is already issued!\n";
+            return;
+        }
+        if (member->borrowedBooks >= 3) {
+            cout << "Member has reached the borrowing limit!\n";
+return;
+        }
+        if (!member->isActive) {
+            cout << "Member is inactive and cannot borrow books!\n";
+            return;
+        }
+
+        book->isIssued = true;
+        member->borrowedBooks++;
+        cout << "Book issued successfully!\n";
+        saveBooks();
+        saveMembers();
+    }
+
+    void returnBook(int bookId, int memberId) {
+        Book* book = NULL;
+        for (int i = 0; i < bookCount; i++) {
+            if (books[i].id == bookId) {
+                book = &books[i];
+                break;
+            }
+        }
+
+        Member* member = membersHead;
+        while (member) {
+            if (member->id == memberId) break;
+            member = member->next;
+        }
+
+        if (!book==!member) {
+            cout << "Invalid book or member!\n";
+            return;
+        }
+        if (!book->isIssued) {
+            cout << "This book was not issued!\n";
+            return;
+        }
+
+        book->isIssued = false;
+        member->borrowedBooks--;
+        cout << "Book returned successfully!\n";
+        saveBooks();
+        saveMembers();
+    }
+};
+
+void displayMenu() {
+    cout << "\nLibrary Management System Menu:\n";
+    cout << "1. Add Book\n";
+    cout << "2. Search Book\n";
+    cout << "3. Update Book\n";
+    cout << "4. Delete Book\n";
+    cout << "5. Add Member\n";
+    cout << "6. Search Member\n";
+    cout << "7. Update Member Status\n";
+    cout << "8. Delete Member\n";
+    cout << "9. Issue Book\n";
+    cout << "10. Return Book\n";
+    cout << "0. Exit\n";
+    cout << "Choose an option: ";
+}
+
 //this is from banderaw
 int main() {
     Library lib;
