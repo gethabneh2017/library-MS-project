@@ -102,3 +102,57 @@ public:
         }
         cout << "Book not found!\n";
     }
+// this is tesfaye teshale contribution
+
+// Add a member
+    void addMember(int id, const string& name) {
+        Member* newMember = new Member(id, name);
+        newMember->next = membersHead;
+        membersHead = newMember;
+        cout << "Member added successfully!\n";
+    }
+
+    // Search member by ID
+    void searchMember(int id) const {
+        for (Member* temp = membersHead; temp; temp = temp->next) {
+            if (temp->id == id) {
+                temp->display();
+                return;
+            }
+        }
+        cout << "Member not found!\n";
+    }
+
+    // Update member status
+    void updateMember(int id, bool status) {
+        for (Member* temp = membersHead; temp; temp = temp->next) {
+            if (temp->id == id) {
+                temp->isActive = status;
+                cout << "Member status updated!\n";
+                return;
+            }
+        }
+        cout << "Member not found!\n";
+    }
+
+    // Delete member
+    void deleteMember(int id) {
+        Member* temp = membersHead;
+        Member* prev = nullptr;
+       while (temp) {
+            if (temp->id == id) {
+                if (prev) {
+                    prev->next = temp->next;
+                } else {
+                    membersHead = temp->next;
+                }
+                delete temp;
+                cout << "Member deleted successfully!\n";
+                return;
+            }
+            prev = temp;
+            temp = temp->next;
+        }
+        cout << "Member not found!\n";
+    }
+
