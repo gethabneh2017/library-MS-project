@@ -185,6 +185,60 @@ void addBook(int id, string title, string author, string genre) {
         }
 }
 
+// From Basha Meshabie
+
+    void addMember(int id, string name) {
+        Member* newMember = new Member(id, name);
+        newMember->next = membersHead;
+        membersHead = newMember;
+        cout << "Member added successfully!\n";
+        saveMembers();
+    }
+
+    void searchMember(int id) {
+        Member* temp = membersHead;
+        while (temp) {
+            if (temp->id == id) {
+                temp->display();
+                return;
+            }
+            temp = temp->next;
+        }
+        cout << "Member not found!\n";
+    }
+
+    void updateMember(int id, bool status) {
+        Member* temp = membersHead;
+        while (temp) {
+            if (temp->id == id) {
+                temp->isActive = status;
+                cout << "Member status updated!\n";
+                saveMembers();
+                return;
+            }
+            temp = temp->next;
+        }
+        cout << "Member not found!\n";
+    }
+
+    void deleteMember(int id) {
+        Member* temp = membersHead;
+        Member* prev = NULL;
+        while (temp) {
+            if (temp->id == id) {
+                if (prev) prev->next = temp->next;
+                else membersHead = temp->next;
+                delete temp;
+                cout << "Member deleted successfully!\n";
+                saveMembers();
+                return;
+            }
+            prev = temp;
+            temp = temp->next;
+        }
+        cout << "Member not found!\n";
+    }
+
 //this is from banderaw
 int main() {
     Library lib;
