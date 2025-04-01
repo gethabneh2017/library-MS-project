@@ -184,7 +184,30 @@ void addBook(int id, string title, string author, string genre) {
             cout << "Book not found!\n";
         }
 }
+void updateBook(int id, string newTitle, string newAuthor, string newGenre) {
+        for (int i = 0; i < bookCount; i++) {
+            if (books[i].id == id) {
+                books[i] = {id, newTitle, newAuthor, newGenre, books[i].isIssued};
+                cout << "Book updated successfully!\n";
+                saveBooks();
+                return;
+            }
+        }
+        cout << "Book not found!\n";
+    }
 
+    void deleteBook(int id) {
+        for (int i = 0; i < bookCount; i++) {
+            if (books[i].id == id) {
+                books[i] = books[bookCount - 1];
+                bookCount--;
+                cout << "Book deleted successfully!\n";
+                saveBooks();
+                return;
+            }
+        }
+        cout << "Book not found!\n";
+    }
 // From Basha Meshabie
 
     void addMember(int id, string name) {
@@ -256,7 +279,7 @@ void addBook(int id, string title, string author, string genre) {
             member = member->next;
         }
 
-if (!book==!member) {
+if (!book||!member) {
             cout << "Invalid book or member!\n";
             return;
         }
@@ -295,7 +318,7 @@ return;
             member = member->next;
         }
 
-        if (!book==!member) {
+        if (!book||!member) {
             cout << "Invalid book or member!\n";
             return;
         }
