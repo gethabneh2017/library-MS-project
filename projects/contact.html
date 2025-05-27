@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Banderaw's Portfolio - Contact</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="logo-link">
+            <img src="image.png" alt="Banderaw's Logo" class="logo">
+            <span class="site-title">Banderaw</span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <label class="menu-toggle" aria-label="Toggle navigation menu">
+            <img src="https://static.vecteezy.com/system/resources/previews/026/306/374/original/menu-list-icon-app-navigation-option-page-interface-dropdown-three-lines-button-dots-sign-symbol-black-artwork-graphic-illustration-clipart-eps-vector.jpg" class="menu-icon" alt="Menu Icon">
+        </label>
+    </div>
+
+    <div id="contact-section" class="content-section contact-section">
+        <div class="section-container">
+            <h2>Contact Me!</h2>
+            <div class="contact-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQGaRE92LYdFRG2J3yjjL5FmJfik2h1KC8g&s" class="contact-image" alt="Contact Icon">
+                <p>Feel free to reach out through the following channels or use the form below.</p>
+            </div>
+            <div class="contact-info">
+                <p>
+                    <a href="mailto:bandis1921@gmail.com" class="contact-link">
+                        <span class="icon">&#9993;</span> Email: bandis1921@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+251954568588" class="contact-link">
+                        <span class="icon">&#9742;</span> Phone: +251 954568588
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Send me a message:</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject (Optional):</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn submit-btn">Send Message</button>
+                    <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <button id="backTopButton" title="Go to top">Top</button>
+    <script src="script.js"></script>
+</body>
+</html>
