@@ -1,4 +1,4 @@
-// --- Mobile Menu Toggle (JavaScript Controlled) ---
+//  Mobile Menu Toggle (JavaScript Controlled) ---
 document.addEventListener('DOMContentLoaded', () => {
     // Select the hamburger icon label
     const menuToggle = document.querySelector('.menu-toggle');
