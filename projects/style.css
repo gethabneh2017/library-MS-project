@@ -4,8 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
 body {
     font-family: 'Poppins', sans-serif; 
     line-height: 1.6;
@@ -19,8 +17,6 @@ body {
 body.loaded {
     opacity: 1;
 }
-
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -52,8 +48,6 @@ body.loaded {
 .site-title {
     color: #3498db; 
 }
-
-
 .nav-links ul {
     display: flex;
     list-style: none;
@@ -130,7 +124,6 @@ h1 {
     color: #2c3e50; 
     font-weight: 700;
 }
-
 h2 {
     font-size: 2.5em;
     margin-bottom: 25px;
@@ -145,15 +138,12 @@ h3 {
     color: #2c3e50;
     font-weight: 600;
 }
-
 p {
     font-size: 1.1em;
     margin-bottom: 15px;
     line-height: 1.8;
     color: #555;
 }
-
-
 #hero-section { 
     background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%); 
     padding: 80px 20px;
@@ -167,7 +157,6 @@ p {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     max-width: 1200px;
 }
-
 .hero-content {
     display: flex;
     flex-wrap: wrap; 
@@ -176,7 +165,6 @@ p {
     gap: 40px; 
     max-width: 1000px;
 }
-
 .profile-hero { 
     width: 250px;
     height: 250px;
@@ -213,7 +201,7 @@ p {
 
 /* Styles for "Banderaw!" text colors */
 .hero-text h1 span {
-    display: inline-block; /* Essential for applying color to individual letters */
+    display: inline-block; 
     
 }
 
@@ -394,7 +382,7 @@ p {
 .contact-image {
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Changed from 40% to 50% for a perfect circle */
+    border-radius: 50%; 
     object-fit: cover;
     margin-bottom: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -417,7 +405,7 @@ p {
 
 .contact-link .icon {
     font-size: 1.2em;
-    color: #9b59b6; /* Icon color */
+    color: #9b59b6;
 }
 
 .contact-link:hover {
@@ -470,7 +458,7 @@ p {
 }
 
 .form-group textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
     min-height: 100px;
 }
 
@@ -478,10 +466,10 @@ p {
     color: #e74c3c;
     font-size: 0.9em;
     margin-top: 5px;
-    display: none; /* Hide until validation fails */
+    display: none; 
 }
 
-.submit-btn { /* Applied to the button directly now */
+.submit-btn {
     width: 100%;
     background-color: #9b59b6;
     color: #fff;
@@ -521,19 +509,19 @@ p {
 }
 
 
-/* Back to Top Button */
+
 #backTopButton {
-    display: none; /* Initially hidden */
+    display: none; 
     position: fixed;
     bottom: 25px;
     right: 25px;
     border: none;
     outline: none;
-    background-color: #3498db; /* Match theme color */
+    background-color: #3498db; 
     color: white;
     cursor: pointer;
     padding: 12px 18px;
-    border-radius: 50%; /* Round button */
+    border-radius: 50%; 
     font-size: 16px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
@@ -561,10 +549,6 @@ p {
     to { opacity: 1; transform: translateX(0); }
 }
 
-/* @keyframes waveText is completely removed as it's not applied */
-
-
-/* --- Media Queries for Responsiveness --- */
 @media (max-width: 992px) {
     .hero-text h1 {
         font-size: 2.8em;
@@ -594,15 +578,15 @@ p {
     }
     .nav-links {
         position: fixed;
-        width: 60%; /* Adjust width for mobile overlay */
+        width: 60%; 
         height: 100vh;
-        background-color: #34495e; /* Darker background for mobile menu */
-        top: 70px; /* Position below the navbar */
-        left: -100%; /* Hide off-screen initially */
+        background-color: #34495e; 
+        top: 70px; 
+        left: -100%; 
         text-align: center;
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        justify-content: flex-start; /* Align from top */
+        flex-direction: column; 
+        justify-content: flex-start; 
         transition: all 0.4s ease-in-out;
         padding-top: 30px;
         z-index: 998;
@@ -610,7 +594,7 @@ p {
     }
 
     .nav-links.nav-active {
-        left: 0; /* Slide in from the left */
+        left: 0; 
     }
 
     .nav-links ul {
@@ -618,12 +602,12 @@ p {
     }
 
     .nav-links li {
-        margin: 20px 0; /* More space between vertical links */
+        margin: 20px 0; 
     }
 
     .nav-links a {
         font-size: 1.4em;
-        color: #ecf0f1; /* Lighter text for dark background */
+        color: #ecf0f1; 
     }
 
     .nav-links a:hover {
@@ -634,31 +618,31 @@ p {
     }
 
     .menu-toggle {
-        display: block; /* Show hamburger icon on mobile */
+        display: block;
     }
 
     .site-title {
-        display: none; /* Hide text title on small screens to save space */
+        display: none; 
     }
 
-    #hero-section { /* Target by ID now */
+    #hero-section { 
         padding: 60px 15px;
     }
 
     .hero-content {
         flex-direction: column;
-        text-align: center; /* Center text when stacked */
+        text-align: center; 
         gap: 30px;
     }
 
     .hero-text {
-        text-align: center; /* Center text within the hero section */
+        text-align: center; 
     }
 
     .hero-text h1 {
-        justify-content: center; /* Center name and flag */
+        justify-content: center; 
         font-size: 2.5em;
-        white-space: normal; /* Allow wrapping on small screens */
+        white-space: normal; 
     }
     .profile-hero {
         width: 180px;
@@ -684,20 +668,20 @@ p {
     }
 
     .skill-list {
-        grid-template-columns: 1fr; /* Single column for skills on small screens */
+        grid-template-columns: 1fr; 
     }
 
     .btn {
-        width: 100%; /* Full width buttons on mobile */
+        width: 100%; 
         margin-right: 0;
-        margin-bottom: 15px; /* Space between buttons */
+        margin-bottom: 15px;
     }
     .btn:last-child {
         margin-bottom: 0;
     }
 
     .contact-info p {
-        flex-direction: column; /* Stack contact info vertically */
+        flex-direction: column;
         align-items: flex-start;
     }
     .contact-link {
