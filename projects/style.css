@@ -1,33 +1,33 @@
-/* Universal Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base Body Styles for smooth fade-in */
+
 body {
-    font-family: 'Poppins', sans-serif; /* Using Poppins as specified in HTML */
+    font-family: 'Poppins', sans-serif; 
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa; /* Lighter background */
-    opacity: 0; /* Starts invisible for fade-in effect */
-    transition: opacity 0.8s ease-in-out; /* Adjusted transition for smoother fade */
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    background-color: #f8f9fa;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /
+    scroll-behavior: smooth; 
 }
 
-body.loaded { /* Class added by JS after DOM is loaded */
+body.loaded {
     opacity: 1;
 }
 
-/* Navbar Styling - Now applied to a div with class 'navbar' */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff; /* White background for navbar */
-    padding: 10px 5%; /* Responsive padding */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More subtle shadow */
+    background-color: #ffffff; 
+    padding: 10px 5%; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -45,15 +45,15 @@ body.loaded { /* Class added by JS after DOM is loaded */
 .logo {
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Make logo round */
+    border-radius: 50%; 
     margin-right: 10px;
 }
 
 .site-title {
-    color: #3498db; /* Blue for the title */
+    color: #3498db; 
 }
 
-/* Navigation Links (Desktop) - Now applied to a div with class 'nav-links' */
+
 .nav-links ul {
     display: flex;
     list-style: none;
@@ -62,7 +62,7 @@ body.loaded { /* Class added by JS after DOM is loaded */
 }
 
 .nav-links li {
-    margin-left: 30px; /* Space between links */
+    margin-left: 30px; 
 }
 
 .nav-links a {
@@ -71,16 +71,16 @@ body.loaded { /* Class added by JS after DOM is loaded */
     font-weight: 600;
     color: #555;
     transition: color 0.3s ease, transform 0.2s ease;
-    padding: 5px 0; /* Padding for click area */
-    position: relative; /* For underline effect */
+    padding: 5px 0;
+    position: relative; 
 }
 
 .nav-links a:hover {
-    color: #3498db; /* Blue hover color */
+    color: #3498db; 
     transform: translateY(-2px);
 }
 
-.nav-links a::after { /* Underline effect */
+.nav-links a::after { 
     content: '';
     position: absolute;
     width: 0;
@@ -95,48 +95,46 @@ body.loaded { /* Class added by JS after DOM is loaded */
     width: 100%;
 }
 
-/* Mobile Menu Toggle (Hamburger Icon) */
+
 .menu-toggle {
-    display: none; /* Hidden by default on desktop */
+    display: none; 
     cursor: pointer;
-    padding: 5px; /* Increase clickable area */
+    padding: 5px;
 }
 
-.menu-icon { /* Renamed from .menu for consistency with HTML */
+.menu-icon { 
     width: 30px;
     height: 30px;
     vertical-align: middle;
 }
 
-/* --- Main Content Sections (General Styling) --- */
-/* The main content area now uses a div with class 'content-section' or specific IDs like 'hero-section' */
 .content-section {
-    max-width: 1200px; /* Max width for content */
-    margin: 40px auto; /* Center main content and add top/bottom margin */
-    padding: 20px; /* Overall padding */
+    max-width: 1200px; 
+    margin: 40px auto;
+    padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Stronger shadow for sections */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
-    overflow: hidden; /* Clear floats/margins for internal elements */
+    overflow: hidden; 
 }
 
 .section-container {
-    max-width: 800px; /* Inner container for consistent width */
+    max-width: 800px; 
     margin: 0 auto;
 }
 
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #2c3e50; /* Darker heading color, this will be for "Hello, I'm" */
+    color: #2c3e50; 
     font-weight: 700;
 }
 
 h2 {
     font-size: 2.5em;
     margin-bottom: 25px;
-    color: #3498db; /* Blue for section headings */
+    color: #3498db;
     font-weight: 600;
 }
 
@@ -155,73 +153,73 @@ p {
     color: #555;
 }
 
-/* --- Hero Section Specific Styles --- */
-#hero-section { /* Applied to div with ID 'hero-section' */
-    background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%); /* Gradient background */
+
+#hero-section { 
+    background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%); 
     padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh; /* Make hero section taller */
+    min-height: 70vh; 
     text-align: center;
     border-radius: 10px;
-    margin: 20px auto 40px auto; /* Adjust margin for hero section */
+    margin: 20px auto 40px auto; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 1200px; /* Limit hero section width */
+    max-width: 1200px;
 }
 
 .hero-content {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; 
+    justify-content: center; 
     align-items: center;
-    gap: 40px; /* Space between image and text */
+    gap: 40px; 
     max-width: 1000px;
 }
 
-.profile-hero { /* Changed from .profile to be specific to hero */
+.profile-hero { 
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #fff; /* White border */
+    border: 6px solid #fff; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    animation: fadeInScale 1s ease-out forwards; /* Animation on load */
-    will-change: transform, opacity; /* Performance hint for smooth animation */
+    animation: fadeInScale 1s ease-out forwards;
+    will-change: transform, opacity; 
 }
 
 .hero-text {
     flex: 1;
-    min-width: 300px; /* Ensure text doesn't get too narrow */
-    text-align: left; /* Align text to the left within its container */
-    min-height: 250px; /* Ensure stable height for this container */
-    display: flex; /* To correctly align h1 and paragraphs vertically */
-    flex-direction: column; /* To stack items */
-    justify-content: center; /* To vertically center content */
+    min-width: 300px; 
+    text-align: left; 
+    min-height: 250px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
 }
 
 .hero-text h1 {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align name and flag to the left */
+    justify-content: flex-start;
     gap: 15px;
-    font-size: 3.5em; /* Larger heading */
+    font-size: 3.5em;
     margin-bottom: 20px;
     animation: slideInLeft 1s ease-out forwards;
-    white-space: nowrap; /* Keep on one line */
-    min-width: max-content; /* Ensure container is wide enough */
-    min-height: 1.2em; /* Ensure stable height for the H1 line itself */
+    white-space: nowrap; 
+    min-width: max-content;
+    min-height: 1.2em; 
 }
 
 /* Styles for "Banderaw!" text colors */
 .hero-text h1 span {
     display: inline-block; /* Essential for applying color to individual letters */
-    /* No animation here, to remove the wave effect */
+    
 }
 
-.text-green { color: #27ae60; } /* Green for 'B' and 'd' etc. */
-.text-yellow { color: #f1c40f; } /* Yellow for 'a' and 'e' etc. */
-.text-red { color: #e74c3c; }   /* Red for 'n' and 'r' etc. */
+.text-green { color: #27ae60; } 
+.text-yellow { color: #f1c40f; } 
+.text-red { color: #e74c3c; }  
 
 
 .flag {
@@ -231,7 +229,7 @@ p {
     object-fit: cover;
     vertical-align: middle;
     animation: fadeIn 1.5s ease-out forwards;
-    will-change: opacity; /* Performance hint */
+    will-change: opacity; 
 }
 
 .tagline, .description {
@@ -240,7 +238,7 @@ p {
     line-height: 1.6;
     margin-bottom: 10px;
     animation: fadeIn 1.5s ease-out forwards;
-    will-change: opacity; /* Performance hint */
+    will-change: opacity;
 }
 
 .tagline { font-weight: 600; }
@@ -284,14 +282,10 @@ p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* --- About Section Specific Styles --- */
-#about-section { /* Applied to div with ID 'about-section' */
-    /* Inherits from .content-section */
-}
+
 
 #about-section h2 {
-    color: #27ae60; /* Green for About heading */
-}
+    color: #27ae60; 
 
 .intro-paragraph {
     margin-bottom: 25px;
@@ -299,18 +293,18 @@ p {
     color: #444;
 }
 
-.skill-list { /* Renamed from .simple-skill-list for consistency */
+.skill-list { 
     list-style: none;
     padding: 0;
     margin-top: 30px;
-    display: grid; /* Grid for skills */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 15px;
     text-align: left;
 }
 
 .skill-list li {
-    background-color: #e8f8f5; /* Light green background */
+    background-color: #e8f8f5; 
     padding: 15px 20px;
     border-radius: 8px;
     font-size: 1.05em;
@@ -321,14 +315,14 @@ p {
     gap: 10px;
 }
 
-.skill-list li span.icon { /* Target the icon within the list item */
-    color: #27ae60; /* Star icon color */
+.skill-list li span.icon {
+    color: #27ae60;
     font-size: 1.2em;
 }
 
 .skill-list li:hover {
     transform: translateY(-5px);
-    background-color: #d1f2eb; /* Slightly darker green on hover */
+    background-color: #d1f2eb; 
 }
 
 .goal-statement {
@@ -338,13 +332,8 @@ p {
     margin-top: 20px;
 }
 
-/* --- Projects Section Specific Styles --- */
-#projects-section { /* Applied to div with ID 'projects-section' */
-    /* Inherits from .content-section */
-}
-
 #projects-section h2 {
-    color: #e67e22; /* Orange for Projects heading */
+    color: #e67e22; 
 }
 
 .project-card {
@@ -390,24 +379,19 @@ p {
 .github-icon {
     width: 20px;
     height: 20px;
-    filter: invert(100%); /* Make GitHub icon white */
+    filter: invert(100%); 
 }
 
-
-/* --- Contact Section Specific Styles --- */
-#contact-section { /* Applied to div with ID 'contact-section' */
-    /* Inherits from .content-section */
-}
 
 #contact-section h2 {
-    color: #9b59b6; /* Purple for Contact heading */
+    color: #9b59b6; 
 }
 
 .contact-header {
     margin-bottom: 30px;
 }
 
-.contact-image { /* Renamed from .aaa for clarity */
+.contact-image {
     width: 120px;
     height: 120px;
     border-radius: 50%; /* Changed from 40% to 50% for a perfect circle */
